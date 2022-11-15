@@ -1,0 +1,14 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<div class="header-container">
+    <a href={% url 'todolist' %}>&#10096; Back</a>
+</div>
+<div class="card-body">
+
+    <form method="post" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Submit" class="button">
+    </form>
+</div>
+{% endblock content %}
